@@ -17,7 +17,7 @@ export default function Productos(props) {
                 <Card.Title>{producto.name}</Card.Title>
                 <Card.Text>{producto.extraInfo}</Card.Text>
                 <Card.Text>{producto.price} $ / Unidad</Card.Text>
-                <Button>Añadir al carrito</Button>
+                <Button >Añadir al carrito</Button>
             </Card>
         </Col>
     );
