@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Productos from './Components/Productos/Productos';
+import TopMenu from './Components/TopMenu/TopMenu';
+import UseFetch from './Hooks/UseFetch';
+import {UrlApiProducts } from './utils/Constans';
+
 
 function App() {
+
+  const listaProductos = UseFetch(UrlApiProducts);
+  //console.log(listaProductos);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopMenu />
+      
+      <Productos listaProductos={listaProductos} />
     </div>
   );
 }
